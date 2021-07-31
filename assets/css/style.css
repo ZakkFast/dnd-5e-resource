@@ -1,6 +1,6 @@
 *{
     padding: 0;
-    margin: 0;  
+    margin: 0; 
 }
 
 body {
@@ -27,15 +27,15 @@ nav a {
     text-align: center;
     text-decoration: none;
     padding: 10px 0;
-    color: var(--off-white);
+    color: #fff;
 }
 
 nav a:hover {
-  color: var(--dark-grey);
+  color: #999;
 }
 
 nav li:hover {
-    background-color: var(--off-white);
+    background-color: #fff;
 }
 
 nav a#openup {
