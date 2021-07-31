@@ -1,3 +1,16 @@
+*{
+    padding: 0;
+    margin: 0;  
+}
+
+body {
+    background-color: #333;
+}
+
+header {
+    background-color: #222;
+}
+
 nav ul {
     padding: 0;
     margin: 0;
@@ -6,6 +19,7 @@ nav ul {
 nav li {
     display: inline;
     float: left;
+    color: #fff;
 }
 nav a {
     display: inline-block;
@@ -26,6 +40,22 @@ nav li:hover {
 
 nav a#openup {
     display: none;
+}
+
+#divDrop {
+    background-color: #222;
+    padding: 1rem;
+    width: fit-content;
+    border-radius: 5px;
+    margin: auto;
+    margin-top: 25px;
+}
+
+#spellContainer {
+    background-color: #222;
+    color: #fff;
+    margin: 1.5rem;
+    padding: 1rem;
 }
 
 @media screen and (max-width: 580px) {
@@ -92,4 +122,3 @@ nav a#openup {
         zoom: 1;
     }
     
-}
