@@ -72,11 +72,12 @@ nav a#openup {
 }
 
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100vw;
     height: 60px;
     padding: 1rem;
+    margin-top: 5rem;
 }
 
 
