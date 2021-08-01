@@ -20,12 +20,18 @@ $(document).ready(function(){
                         url: `${apiurl}monsters/${selectedVal}`,
                         dataType: 'json',
                         success: function(data){
-                            console.log(data.speed)
+                            function capitalizeFirstLetter(string) {
+                                return string.charAt(0).toUpperCase() + string.slice(1);
+                              }
+                            let creatureType = capitalizeFirstLetter(data.type)
+                            let datalignment = capitalizeFirstLetter(data.alignment);
+                            console.log(data)
                             $('#contentContainer').html(`
                             <div class='container' id='containerEl'>
                                 <h3>${data.name}</h3>
+                                <p>Type: ${creatureType}</p>
                                 <p>Size: ${data.size}</p>
-                                <p>Alignment: ${data.alignment}</p>
+                                <p>Alignment: ${datalignment}</p>
                                 <p>Challenge Rating: ${data.challenge_rating}</p>
                                 <p>Experience: ${data.xp}</p>
                                 <p>Armor Class: ${data.armor_class}</p>
