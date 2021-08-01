@@ -81,9 +81,10 @@ footer {
     padding: 1rem;
 }
 
-li {
+.descli {
     margin-left: .8rem;
     list-style: none;
+    padding: .5rem;
 }
 
 @media screen and (max-width: 580px) {
