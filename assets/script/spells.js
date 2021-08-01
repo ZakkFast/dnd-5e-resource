@@ -1,6 +1,6 @@
 const apiurl = 'https://www.dnd5eapi.co/api/'
 $(document).ready(function(){
-    function getHelp () {
+    function getSpell () {
         $.ajax({
             type: 'GET',
             url: `${apiurl}spells`,
@@ -46,5 +46,5 @@ $(document).ready(function(){
             }
         })
     }
-    getHelp()
+    getSpell()
 })
