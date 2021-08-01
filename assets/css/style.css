@@ -59,6 +59,27 @@ nav a#openup {
     border-radius: 3px;
 }
 
+.text-center {
+    text-align: center;
+}
+
+.m-top-5 {
+    margin-top: 5rem;
+}
+
+.bg-dark {
+    background-color: #222 !important;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100vw;
+    height: 60px;
+    padding: 1rem;
+}
+
+
 @media screen and (max-width: 580px) {
     nav {
         height: auto;
