@@ -27,17 +27,18 @@ $(document).ready(function(){
                         success: function(data){
                             console.log(data)
                             $('#spellContainer').html(`
-                            <div>
-                            <h3>Spell: ${data.name}</h3>
-                            <p>Level: ${data.level}</p>
-                            <p>School: ${data.school.name}</p>
-                            <p>Casting Time: ${data.casting_time}</p>
-                            <p>Duration: ${data.duration}
-                            <p>Range: ${data.range}</p>
-                            <p>Spell Description: ${data.desc[0]}</p>
+                            <div class="container">
+                                <h3>Spell: ${data.name}</h3>
+                                <p>Level: ${data.level}</p>
+                                <p>School: ${data.school.name}</p>
+                                <p>Casting Time: ${data.casting_time}</p>
+                                <p>Duration: ${data.duration}
+                                <p>Range: ${data.range}</p>
+                                <p>Spell Description: ${data.desc[0]}</p>
+                            </div>
                             `)
                             if(data.desc.length > 1){
-                                $('#spellContainer').append(`<p>Spell Effect: ${data.desc[1]}</p>`)
+                                $('.container').append(`<p>Spell Effect: ${data.desc[1]}</p>`)
                             }
                         }
                     })

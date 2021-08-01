@@ -46,16 +46,17 @@ nav a#openup {
     background-color: #222;
     padding: 1rem;
     width: fit-content;
-    border-radius: 5px;
+    border-radius: 3px;
     margin: auto;
     margin-top: 25px;
 }
 
-#spellContainer {
+.container {
     background-color: #222;
     color: #fff;
     margin: 1.5rem;
     padding: 1rem;
+    border-radius: 3px;
 }
 
 @media screen and (max-width: 580px) {
