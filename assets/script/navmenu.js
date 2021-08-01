@@ -38,4 +38,3 @@ $('.cf a').on('click', function(event) {
       );
     }
   });
-  console.log('navbar test')

@@ -15,13 +15,11 @@ $(document).ready(function(){
                 }
                 $('#divDrop').change(function(){
                     let selectedVal = $(this).find(':selected').val()
-                    console.log(selectedVal)
                     $.ajax({
                         type: 'GET',
                         url: `${apiurl}spells/${selectedVal}`,
                         dataType: 'json',
                         success: function(data){
-                            console.log(data)
                             $('#contentContainer').html(`
                             <div class="container">
                                 <h3>Spell: ${data.name}</h3>
