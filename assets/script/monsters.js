@@ -25,7 +25,6 @@ $(document).ready(function(){
                               }
                             let creatureType = capitalizeFirstLetter(data.type)
                             let datalignment = capitalizeFirstLetter(data.alignment);
-                            console.log(data)
                             $('#contentContainer').html(`
                             <div class='container' id='containerEl'>
                                 <h3>${data.name}</h3>
@@ -68,21 +67,18 @@ $(document).ready(function(){
                             if(data.speed.burrow){
                                 let burrowSpeed = $(`<li class='descli'>Burrow: ${data.speed.burrow}</li>`)
                                 $('#speedStats').append(burrowSpeed)
-                            // } else {
-                            //     let walkSpeed = $(`<li class='descli'>Walk: ${data.speed.walk}</li>`)
-                            //     $('#speedStats').append(walkSpeed)
                             }
                             for(i = 0; i < data.actions.length; i++){
                                 let actionData = $(`<li class='descli'>${data.actions[i].name}: ${data.actions[i].desc}</li>`)
-
                                 $('#actionEl').append(actionData)
                             }
-                            if(data.legendary_actions.length > 0){
+                            if(data.legendary_actions){
                                 $(`#legendaryActionsEl`).text('Legendary Actions:')
-                            }
-                            for(i = 0; i < data.legendary_actions.length; i++){
-                                let legendaryAction = $(`<li class='descli'>${data.legendary_actions[i].name}: ${data.legendary_actions[i].desc}</li>`)
-                                $('#legendaryActionsEl').append(legendaryAction)
+
+                                for(i = 0; i < data.legendary_actions.length; i++){
+                                    let legendaryAction = $(`<li class='descli'>${data.legendary_actions[i].name}: ${data.legendary_actions[i].desc}</li>`)
+                                    $('#legendaryActionsEl').append(legendaryAction)
+                                }
                             }
                             
                         }
