@@ -26,7 +26,7 @@ $(document).ready(function(){
                         dataType: 'json',
                         success: function(data){
                             console.log(data)
-                            $('#spellContainer').html(`
+                            $('#contentContainer').html(`
                             <div class="container">
                                 <h3>Spell: ${data.name}</h3>
                                 <p>Level: ${data.level}</p>
