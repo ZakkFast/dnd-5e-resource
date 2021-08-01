@@ -6,10 +6,6 @@ $(document).ready(function(){
             url: `${apiurl}spells`,
             dataType: 'json',
             success: function(data){
-                // console.log(data.results)
-                console.log(data.results.length)
-                // console.log(data.results[0].index)
-                // console.log(data.results[0].name)
                 let selectEl = $(`<select></select>`)
                 for (i = 0; i < data.results.length; i++){
                    let divContainer = $(`#divDrop`)
