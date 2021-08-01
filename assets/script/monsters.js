@@ -25,6 +25,7 @@ $(document).ready(function(){
                             <div class='container' id='containerEl'>
                                 <h3>${data.name}</h3>
                                 <p>Size: ${data.size}</p>
+                                <p>Alignment: ${data.alignment}</p>
                                 <p>Challenge Rating: ${data.challenge_rating}</p>
                                 <p>Experience: ${data.xp}</p>
                                 <p>Armor Class: ${data.armor_class}</p>
