@@ -13,6 +13,27 @@ $(document).ready(function(){
                    divContainer.append(selectEl)
                    selectEl.append(optionEl)
                 }
+                $('#divDrop').change(function(){
+                    let selectedVal = $(this).find(':selected').val()
+                    $.ajax({
+                        type: 'GET',
+                        url: `${apiurl}races/${selectedVal}`,
+                        dataType: 'json',
+                        success: function(data){
+                            console.log(data)
+                            $('#contentContainer').html(`
+                            <div class='container'>
+                                <h3>${data.name}</h3>
+                                <p>Size: ${data.size}</p>
+                                <p>Age: ${data.age}</p>
+                                <p>Speed: ${data.speed}
+                                <p>Languages: ${data.language_desc}
+                                <p>Alignment: ${data.alignment}</p>
+                            </div>
+                            `)
+                        }
+                    })
+                })
             }
         })
     }
