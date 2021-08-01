@@ -20,7 +20,7 @@ $(document).ready(function(){
                         url: `${apiurl}monsters/${selectedVal}`,
                         dataType: 'json',
                         success: function(data){
-                            console.log(data)
+                            console.log(data.speed)
                             $('#contentContainer').html(`
                             <div class='container' id='containerEl'>
                                 <h3>${data.name}</h3>
@@ -31,6 +31,9 @@ $(document).ready(function(){
                                 <p>Armor Class: ${data.armor_class}</p>
                                 <p>Hit Points: ${data.hit_points}</p>
                                 <p>Hit Dice: ${data.hit_dice}</p>
+                                <ul id='speedStats'>
+                                    Speed
+                                </ul>
                                 <ul>Attributes:
                                 <li class='descli'>Str ${data.strength}</li> 
                                 <li class='descli'>Dex ${data.dexterity}</li> 
@@ -45,6 +48,24 @@ $(document).ready(function(){
                                 <ul id='legendaryActionsEl'>
                                 </ul>
                             `)
+                            if(data.speed.walk){
+                                let walkSpeed = $(`<li class='descli'>Walk: ${data.speed.walk}</li>`)
+                                $('#speedStats').append(walkSpeed)
+                            } if(data.speed.fly){
+                                let flySpeed = $(`<li class='descli'>Fly: ${data.speed.fly}</li>`)
+                                $('#speedStats').append(flySpeed)
+                            }
+                            if(data.speed.swim){
+                                let swimSpeed = $(`<li class='descli'>Swim: ${data.speed.swim}</li>`)
+                                $('#speedStats').append(swimSpeed)
+                            }
+                            if(data.speed.burrow){
+                                let burrowSpeed = $(`<li class='descli'>Burrow: ${data.speed.burrow}</li>`)
+                                $('#speedStats').append(burrowSpeed)
+                            // } else {
+                            //     let walkSpeed = $(`<li class='descli'>Walk: ${data.speed.walk}</li>`)
+                            //     $('#speedStats').append(walkSpeed)
+                            }
                             for(i = 0; i < data.actions.length; i++){
                                 let actionData = $(`<li class='descli'>${data.actions[i].name}: ${data.actions[i].desc}</li>`)
 
@@ -55,9 +76,9 @@ $(document).ready(function(){
                             }
                             for(i = 0; i < data.legendary_actions.length; i++){
                                 let legendaryAction = $(`<li class='descli'>${data.legendary_actions[i].name}: ${data.legendary_actions[i].desc}</li>`)
-
                                 $('#legendaryActionsEl').append(legendaryAction)
                             }
+                            
                         }
                     })
                 })
