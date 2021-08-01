@@ -24,13 +24,13 @@ $(document).ready(function(){
                                 return string.charAt(0).toUpperCase() + string.slice(1);
                               }
                             let creatureType = capitalizeFirstLetter(data.type)
-                            let datalignment = capitalizeFirstLetter(data.alignment);
+                            let dataAlignment = capitalizeFirstLetter(data.alignment);
                             $('#contentContainer').html(`
                             <div class='container' id='containerEl'>
                                 <h3>${data.name}</h3>
                                 <p>Type: ${creatureType}</p>
                                 <p>Size: ${data.size}</p>
-                                <p>Alignment: ${datalignment}</p>
+                                <p>Alignment: ${dataAlignment}</p>
                                 <p>Challenge Rating: ${data.challenge_rating}</p>
                                 <p>Experience: ${data.xp}</p>
                                 <p>Armor Class: ${data.armor_class}</p>
