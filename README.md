@@ -16,6 +16,16 @@
 ### Additional Information
 This project uses the follwing <a href='http://www.dnd5eapi.co/'>API</a><br>
 Along with <a href='https://getbootstrap.com/'>Bootstrap</a> and <a href='https://jquery.com/'>Jquery</a><br>
+
+### License 
+None
+
+### Images of App
+<img src="assets/images/ss4.png">
+<img src="assets/images/ss2.png">
+<img src="assets/images/ss3.png">
+<img src="assets/images/ss1.png">
+
 ### Contact
 ZakkFastPro@gmail.com<br>
 github.com/zakkfast
